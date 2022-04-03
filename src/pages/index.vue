@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="index">
     index
   </div>
 </template>
@@ -9,3 +9,9 @@ export default {
   name: 'index',
 };
 </script>
+
+<style scoped lang="stylus">
+  .index
+    background-color: lightblue
+    padding: 20px
+</style>

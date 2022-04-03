@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home">
     home
   </div>
 </template>
@@ -9,3 +9,9 @@ export default {
   name: 'home',
 };
 </script>
+
+<style scoped lang="stylus">
+  .home
+    background-color: lightgrey
+    padding: 40px
+</style>
