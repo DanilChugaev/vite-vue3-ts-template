@@ -1,16 +1,88 @@
-# Vue 3 + Typescript + Vite
+# vite-vue3-ts-template
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A boilerplate code for vue3 projects with typescript
 
-## Recommended IDE Setup
+## Contents
+  - [Prerequisites](#prerequisites)
+  - [Features](#features)
+  - [Run Locally](#run-locally)
+  - [Build For Production](#build-for-production)
+  - [Lint project](#lint-project)
+  - [Run tests](#run-tests)
+  - [License](#license)
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+  ## Prerequisites
 
-## Type Support For `.vue` Imports in TS
+- [npm](http://npmjs.com)
+- [Node.js](https://nodejs.org/en/download/)
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
+## Features
 
-1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+Here's an overview of the included main tools
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+- **[Vite](https://vitejs.dev)** - Next Generation Frontend Tooling
+- **[Typescript](https://www.typescriptlang.org)** - superset of JavaScript which primarily provides optional static typing, classes and interfaces
+- **[ESLint](https://eslint.org)** - the pluggable linting utility
+- **[Stylus](https://stylus-lang.com)** - is a revolutionary new language, providing an efficient, dynamic, and expressive way to generate CSS
+- **[Jest](https://jestjs.io)** - is a delightful JavaScript Testing Framework with a focus on simplicity
+- **[Husky](https://typicode.github.io/husky/#/)** - modern native Git hooks made easy
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone git@github.com:DanilChugaev/vite-vue3-ts-template.git my-project
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the development server
+
+```bash
+  npm run dev
+```
+
+## Build For Production
+
+To generate production build
+
+```bash
+ npm run build
+```
+
+## Lint project
+
+To lint code in project
+
+```bash
+ npm run lint
+```
+
+## Run tests
+
+To run unit tests
+
+```bash
+ npm run test
+```
+
+To run it in change tracking mode (--watch mode)
+
+```bash
+ npm run test-watch
+```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
