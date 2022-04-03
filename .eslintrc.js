@@ -21,6 +21,9 @@ module.exports = {
 	'globals': {
 		'module': true,
 		'defineProps': true,
+		'describe': true,
+		'test': true,
+		'expect': true,
 	},
 	'rules': {
 		'linebreak-style': [
@@ -37,7 +40,7 @@ module.exports = {
 		],
 		'comma-dangle': [
 			'error',
-			'always',
+			'only-multiline',
 		],
 	},
 };
