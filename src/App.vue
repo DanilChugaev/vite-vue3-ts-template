@@ -1,12 +1,28 @@
 <template>
   <div>
      <img alt="Vue logo" src="./assets/logo.png" />
+     <button @click="increment">увеличить</button>
+     <div>
+       result - {{ count }}
+     </div>
   </div>
 </template>
 
 <script lang="ts">
 export default {
   name: 'App',
+
+  computed: {
+    count(): number {
+      return this.$store.state.count;
+    },
+  },
+
+  methods: {
+    increment() {
+      this.$store.commit('increment');
+    }
+  }
 };
 </script>
 

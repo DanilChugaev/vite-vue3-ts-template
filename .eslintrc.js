@@ -26,6 +26,7 @@ module.exports = {
 		'expect': true,
 	},
 	'rules': {
+		'@typescript-eslint/ban-ts-comment': 0,
 		'linebreak-style': [
 			'error',
 			'unix',
