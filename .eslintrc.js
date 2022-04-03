@@ -27,6 +27,7 @@ module.exports = {
 	},
 	'rules': {
 		'@typescript-eslint/ban-ts-comment': 0,
+		'vue/multi-word-component-names': 0,
 		'linebreak-style': [
 			'error',
 			'unix',

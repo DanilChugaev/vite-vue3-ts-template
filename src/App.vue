@@ -5,6 +5,11 @@
      <div>
        result - {{ count }}
      </div>
+
+    <router-link to="/">Index</router-link>
+    <br>
+    <router-link to="/home">Go to Home</router-link>
+     <router-view></router-view>
   </div>
 </template>
 
