@@ -1,0 +1,23 @@
+@media (prefers-color-scheme: light) {
+    :root {
+        --aside-background-color: #fff;
+        --header-background-color: #fff;
+        --main-background-color: #f7f9fb;
+
+        --border-color: #d0d7de;
+        --text-color: #213547;
+        --text-hover-color: #274056;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --aside-background-color: #fff;
+        --header-background-color: #fff;
+        --main-background-color: #f7f9fb;
+
+        --border-color: #d0d7de;
+        --text-color: #213547;
+        --text-hover-color: #274056;
+    }
+}

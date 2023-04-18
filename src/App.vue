@@ -14,29 +14,27 @@
 </template>
 
 <script lang="ts">
+import { computed } from 'vue';
+
+import { useCommonStore } from '~/store';
+
 export default {
   name: 'App',
 
-  computed: {
-    count(): number {
-      return this.$store.state.count;
-    },
-  },
+  setup() {
+    const store = useCommonStore();
 
-  methods: {
-    increment() {
-      this.$store.commit('increment');
-    }
-  }
+    const count = computed(() => store.count);
+    const increment = () => store.increment();
+
+    return {
+      count,
+      increment,
+    };
+  },
 };
 </script>
 
-<style lang="stylus">
-  #app
-    font-family: Avenir, Helvetica, Arial, 'sans-serif'
-    -webkit-font-smoothing: antialiased
-    -moz-osx-font-smoothing: grayscale
-    text-align: center
-    color: #2c3e50
-    margin-top: 60px
+<style lang="scss">
+@import "./assets/scss/index.scss";
 </style>

@@ -10,8 +10,9 @@ export default {
 };
 </script>
 
-<style scoped lang="stylus">
-  .index
-    background-color: lightblue
-    padding: 20px
+<style scoped lang="scss">
+  .index {
+    background-color: lightblue;
+    padding: 20px;
+  }
 </style>

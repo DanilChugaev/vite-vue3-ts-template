@@ -1,17 +1,16 @@
-import { createStore } from 'vuex';
+import { defineStore } from 'pinia';
 
 // Create a new store instance.
-const store = createStore({
-  state () {
-    return {
-      count: 0,
-    };
-  },
-  mutations: {
-    increment (state: { count: number }) {
-      state.count += 1;
+export const useCommonStore = defineStore('common', {
+  state: () => ({
+    count: 0,
+  }),
+
+  actions: {
+    increment () {
+      this.count += 1;
     },
   },
 });
 
-export default store;
+export default useCommonStore;

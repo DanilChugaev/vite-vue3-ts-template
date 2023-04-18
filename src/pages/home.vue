@@ -10,8 +10,9 @@ export default {
 };
 </script>
 
-<style scoped lang="stylus">
-  .home
-    background-color: lightgrey
-    padding: 40px
+<style scoped lang="scss">
+  .home {
+    background-color: lightgrey;
+    padding: 40px;
+  }
 </style>
