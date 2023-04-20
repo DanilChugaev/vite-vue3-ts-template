@@ -4,7 +4,7 @@
     :type="type"
     :disabled="disabled"
   >
-    <slot></slot>
+    <slot>кнопка</slot>
   </button>
 </template>
 
@@ -17,6 +17,7 @@ export default {
         type: String,
         default: 'button',
     },
+
     disabled: {
         type: Boolean,
         default: false,
