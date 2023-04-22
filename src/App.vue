@@ -22,9 +22,9 @@
       {{ text }}
     </div>
 
-    <router-link to="/">Index</router-link>
+    <router-link :to="`${$basePath}/`">Index</router-link>
     <br>
-    <router-link to="/home">Go to Home</router-link>
+    <router-link :to="`${$basePath}/home`">Go to Home</router-link>
     <router-view></router-view>
   </div>
 </template>

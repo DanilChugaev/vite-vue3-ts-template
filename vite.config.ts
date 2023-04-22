@@ -14,6 +14,7 @@ export default defineConfig({
     plugins: [
         vue(),
     ],
+    base: './',
     // @ts-ignore
     test: {
         globals: true,
