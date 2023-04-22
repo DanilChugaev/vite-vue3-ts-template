@@ -8,6 +8,7 @@
 
     <div>
       <ui-input
+        v-focus
         v-model="text"
         @keyup.enter="log"
       />
