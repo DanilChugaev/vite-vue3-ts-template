@@ -1,10 +1,13 @@
 <template>
   <div>
     <img alt="Vue logo" src="./assets/logo.png" />
-    <button @click="increment">увеличить</button>
-    <div>
-    result - {{ count }}
-    </div>
+    <ui-button @click="increment" >
+        увеличить
+    </ui-button>
+    <div> result - {{ count }} </div>
+
+    <ui-switch v-model="isDark"/>
+    <div> isDark - {{ isDark }} </div>
 
     <div>
       <ui-input
@@ -37,11 +40,13 @@ import { useCommonStore } from '~/store';
 
 import UiInput from '~/components/ui-input.vue';
 import UiButton from '~/components/ui-button.vue';
+import UiSwitch from './components/ui-switch.vue';
 
 export default {
   name: 'App',
 
   components: {
+    UiSwitch,
     UiInput,
     UiButton,
   },
@@ -50,6 +55,7 @@ export default {
     const store = useCommonStore();
 
     const text = ref('');
+    const isDark = ref(false);
     const count = computed(() => store.count);
     const increment = () => store.increment();
     const log = () => console.log(text.value);
@@ -57,6 +63,7 @@ export default {
     return {
       text,
       count,
+      isDark,
       increment,
       log,
     };
