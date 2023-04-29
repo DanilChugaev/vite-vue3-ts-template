@@ -6,7 +6,7 @@
     </ui-button>
     <div> result - {{ count }} </div>
 
-    <ui-switch v-model="isDark"/>
+    <ui-switch v-model="isDark" @change="toggleDarkMode"/>
     <div> isDark - {{ isDark }} </div>
 
     <div>
@@ -34,7 +34,7 @@
 </template>
 
 <script lang="ts">
-import { computed, ref } from 'vue';
+import { computed, ref, inject } from 'vue';
 
 import { useCommonStore } from '~/store';
 
@@ -51,11 +51,12 @@ export default {
     UiButton,
   },
 
-  setup() {
+  setup(p) {
+    const toggleDarkMode = inject('toggleDarkMode');
     const store = useCommonStore();
 
     const text = ref('');
-    const isDark = ref(false);
+    const isDark = ref(toggleDarkMode());
     const count = computed(() => store.count);
     const increment = () => store.increment();
     const log = () => console.log(text.value);
@@ -66,6 +67,7 @@ export default {
       isDark,
       increment,
       log,
+      toggleDarkMode,
     };
   },
 };
