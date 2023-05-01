@@ -51,7 +51,7 @@ export default {
     UiButton,
   },
 
-  setup(p) {
+  setup() {
     const toggleDarkMode = inject('toggleDarkMode');
     const store = useCommonStore();
 
