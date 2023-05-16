@@ -3,8 +3,8 @@
 html,
 body {
     height: 100%;
-    color: var(--text-color);
-    background-color: var(--main-background-color);
+    color: var(--color-text);
+    background-color: var(--color-bg-main);
 }
 
 * {
@@ -20,4 +20,12 @@ body {
 #app {
     text-align: center;
     margin-top: 60px;
+}
+
+a {
+    color: var(--color-link);
+
+    &:hover {
+        color: var(--color-link-hover);
+    }
 }

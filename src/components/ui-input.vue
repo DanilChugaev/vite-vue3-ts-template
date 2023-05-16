@@ -30,6 +30,6 @@ export default {
   width: 300px;
   height: var(--ui-height);
   padding: 0 var(--spacer-mini);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--color-border);
 }
 </style>

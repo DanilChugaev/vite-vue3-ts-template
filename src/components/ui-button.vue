@@ -30,9 +30,17 @@ export default {
 .ui-button {
   padding: 10px 15px;
   height: var(--ui-height);
-  background: none;
-  color: var(--text-color);
-  border: 1px solid var(--border-color);
+  background-color: var(--color-bg-button);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
   cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-bg-button-hover);
+  }
+
+  &:active {
+    background-color: var(--color-bg-button-active);
+  }
 }
 </style>

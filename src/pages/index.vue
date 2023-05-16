@@ -12,7 +12,6 @@ export default {
 
 <style scoped lang="scss">
   .index {
-    background-color: lightblue;
     padding: 20px;
   }
 </style>
