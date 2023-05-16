@@ -23,9 +23,14 @@ Here's an overview of the included main tools
 - **[Vite](https://vitejs.dev)** - Next Generation Frontend Tooling
 - **[Typescript](https://www.typescriptlang.org)** - superset of JavaScript which primarily provides optional static typing, classes and interfaces
 - **[ESLint](https://eslint.org)** - the pluggable linting utility
-- **[Stylus](https://stylus-lang.com)** - is a revolutionary new language, providing an efficient, dynamic, and expressive way to generate CSS
+- **[Sass-Scss](https://sass-lang.com/)** - is the most mature, stable, and powerful professional grade CSS extension language in the world
 - **[Jest](https://jestjs.io)** - is a delightful JavaScript Testing Framework with a focus on simplicity
 - **[Husky](https://typicode.github.io/husky/#/)** - modern native Git hooks made easy
+- **[Storybook](https://storybook.js.org/)** - is a frontend workshop for building UI components and pages in isolation
+- **[Pinia](https://pinia.vuejs.org/)** - the intuitive store for Vue.js
+- **[Vitest](https://vitest.dev/)** - Blazing Fast Unit Test Framework
+- **[@vue/test-utils](https://github.com/vuejs/test-utils)** - component testing utils for Vue 3
+- **Dark Theme** with toggle
 
 ## Run Locally
 
@@ -81,6 +86,14 @@ To run it in change tracking mode (--watch mode)
 
 ```bash
  npm run test-watch
+```
+
+## Run storybook
+
+To run storybook
+
+```bash
+ npm run storybook
 ```
 
 ## License
