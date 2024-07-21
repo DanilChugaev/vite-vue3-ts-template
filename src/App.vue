@@ -1,10 +1,6 @@
 <template>
   <div>
     <img alt="Vue logo" src="./assets/logo.png" />
-    <ui-button @click="increment" >
-        увеличить
-    </ui-button>
-    <div> result - {{ count }} </div>
 
     <ui-switch v-model="isDark" @change="toggleDarkMode"/>
     <div> isDark - {{ isDark }} </div>
@@ -36,8 +32,6 @@
 <script lang="ts">
 import { computed, ref, inject } from 'vue';
 
-import { useCommonStore } from '~/store';
-
 import UiInput from '~/components/ui-input.vue';
 import UiButton from '~/components/ui-button.vue';
 import UiSwitch from './components/ui-switch.vue';
@@ -53,19 +47,14 @@ export default {
 
   setup() {
     const toggleDarkMode = inject('toggleDarkMode');
-    const store = useCommonStore();
 
     const text = ref('');
     const isDark = ref(toggleDarkMode());
-    const count = computed(() => store.count);
-    const increment = () => store.increment();
     const log = () => console.log(text.value);
 
     return {
       text,
-      count,
       isDark,
-      increment,
       log,
       toggleDarkMode,
     };

@@ -27,7 +27,6 @@ Here's an overview of the included main tools
 - **[Jest](https://jestjs.io)** - is a delightful JavaScript Testing Framework with a focus on simplicity
 - **[Husky](https://typicode.github.io/husky/#/)** - modern native Git hooks made easy
 - **[Storybook](https://storybook.js.org/)** - is a frontend workshop for building UI components and pages in isolation
-- **[Pinia](https://pinia.vuejs.org/)** - the intuitive store for Vue.js
 - **[Vitest](https://vitest.dev/)** - Blazing Fast Unit Test Framework
 - **[@vue/test-utils](https://github.com/vuejs/test-utils)** - component testing utils for Vue 3
 - **Dark Theme** with toggle
