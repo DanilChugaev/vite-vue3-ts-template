@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import IconMoon from '~/components/icons/moon.vue'
+import UiIcon from '~/components/ui-icon.vue'
 
 const model = defineModel()
 </script>
@@ -13,7 +13,7 @@ const model = defineModel()
         />
 
         <span class="ui-switch__slider">
-            <icon-moon class="ui-switch__icon" />
+            <ui-icon class="ui-switch__icon" name="moon" />
         </span>
     </label>
 </template>
@@ -66,8 +66,8 @@ const model = defineModel()
   &__icon {
     transform: rotate(250deg);
     position: absolute;
-    right: 6px;
-    top: 7px;
+    right: 5px;
+    top: 5px;
   }
 }
 </style>

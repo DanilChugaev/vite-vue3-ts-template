@@ -10,7 +10,8 @@
     "prepare": "husky install",
     "test": "vitest --dom",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "sprite": "node src/tools/sprite-generator.cjs"
   },
   "dependencies": {
     "vue": "^3.4.33",
