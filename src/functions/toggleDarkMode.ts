@@ -2,9 +2,11 @@ type HTMLElementEvent<T extends HTMLInputElement> = Event & {
   target: T;
 }
 
+const DARK_MODE = 'dark-mode';
+
 export default () => {
   const useDark: MediaQueryList = window.matchMedia('(prefers-color-scheme: dark)');
-  const isDark: boolean = getDarkModeFromLocalStorage() === null
+  let isDark: boolean = getDarkModeFromLocalStorage() === null
     ? useDark.matches
     : getDarkModeFromLocalStorage() === 'true';
 
@@ -18,6 +20,7 @@ export default () => {
   return (event: HTMLElementEvent<HTMLInputElement>): void | boolean => {
     if (event) {
       toggleDarkModeClass(event.target.checked);
+      isDark = event.target.checked;
     } else {
       return isDark;
     }
@@ -25,14 +28,14 @@ export default () => {
 };
 
 const toggleDarkModeClass = (isDark: boolean) => {
-  document.documentElement.classList.toggle('dark-mode', isDark);
+  document.documentElement.classList.toggle(DARK_MODE, isDark);
   setDarkModeToLocalStorage(isDark);
 };
 
 const setDarkModeToLocalStorage = (isDark: boolean) => {
-  localStorage.setItem('dark-mode', String(isDark));
+  localStorage.setItem(DARK_MODE, String(isDark));
 };
 
 const getDarkModeFromLocalStorage = (): string | null => {
-  return localStorage.getItem('dark-mode');
+  return localStorage.getItem(DARK_MODE);
 };
