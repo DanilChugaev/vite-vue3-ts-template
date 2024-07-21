@@ -1,13 +1,13 @@
-import { mount } from '@vue/test-utils';
-import UiButton from '~/components/ui-button.vue';
+import { mount } from '@vue/test-utils'
+import UiButton from '~/components/ui-button.vue'
 
 describe('UiButton', () => {
     test('renders component', () => {
-        expect(UiButton).toBeTruthy();
+        expect(UiButton).toBeTruthy()
     
-        const type = 'submit';
-        const disabled = true;
-        const text = 'Кнопка';
+        const type = 'submit'
+        const disabled = true
+        const text = 'Кнопка'
     
         const wrapper = mount(UiButton, {
             props:{
@@ -17,12 +17,12 @@ describe('UiButton', () => {
             slots: {
                 default: text,
             },
-        });
+        })
     
-        expect(wrapper.text()).toContain('');
-        expect(wrapper.classes('ui-button')).toBe(true);
-        expect(wrapper.attributes('type')).toEqual(type);
-        expect(wrapper.attributes('disabled')).toBeDefined();
-        expect(wrapper.html()).toContain(text);
-    });
-});
+        expect(wrapper.text()).toContain('')
+        expect(wrapper.classes('ui-button')).toBe(true)
+        expect(wrapper.attributes('type')).toEqual(type)
+        expect(wrapper.attributes('disabled')).toBeDefined()
+        expect(wrapper.html()).toContain(text)
+    })
+})

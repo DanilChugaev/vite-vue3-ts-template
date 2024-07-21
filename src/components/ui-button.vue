@@ -1,3 +1,19 @@
+<script lang="ts" setup>
+import { PropType } from 'vue'
+
+defineProps({
+  type: {
+    type: String as PropType<'button' | 'submit' | 'reset' | undefined>,
+    default: 'button',
+  },
+
+  disabled: {
+    type: Boolean,
+    default: false,
+  },
+})
+</script>
+
 <template>
   <button
     class="ui-button"
@@ -7,24 +23,6 @@
     <slot>кнопка</slot>
   </button>
 </template>
-
-<script lang="ts">
-export default {
-  name: 'ui-button',
-
-  props: {
-    type: {
-        type: String,
-        default: 'button',
-    },
-
-    disabled: {
-        type: Boolean,
-        default: false,
-    },
-  },
-};
-</script>
 
 <style scoped lang="scss">
 .ui-button {

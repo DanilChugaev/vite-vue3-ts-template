@@ -22,9 +22,9 @@
 </template>
 
 <script lang="ts">
-import MyButton from './Button.vue';
+import MyButton from './Button.vue'
 
-import type { User } from './types';
+import type { User } from './types'
 
 export default {
   name: 'layout-header',
@@ -39,7 +39,7 @@ export default {
   },
 
   emits: ['logout', 'login', 'createAccount'],
-};
+}
 </script>
 
 <style>

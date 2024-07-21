@@ -10,9 +10,9 @@
 </template>
 
 <script lang="ts">
-import { computed } from 'vue';
+import { computed } from 'vue'
 
-import type { ButtonSize } from './types';
+import type { ButtonSize } from './types'
 
 export default {
   props: {
@@ -43,21 +43,21 @@ export default {
       'storybook-button--primary': props.primary,
       'storybook-button--secondary': !props.primary,
       [`storybook-button--${props.size}`]: true,
-    }));
+    }))
 
     const style = computed(() => ({
       backgroundColor: props.backgroundColor
-    }));
+    }))
 
-    const onClick = () => context.emit('click', 1);
+    const onClick = () => context.emit('click', 1)
 
     return {
       classes,
       style,
       onClick,
-    };
+    }
   },
-};
+}
 </script>
 
 <style lang="scss">

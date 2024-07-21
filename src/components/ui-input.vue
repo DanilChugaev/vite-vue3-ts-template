@@ -1,29 +1,14 @@
+<script lang="ts" setup>
+const model = defineModel()
+</script>
+
 <template>
   <input
+    v-model="model"
     class="ui-input"
     type="text"
-    :value="modelValue"
-    @input="updateInput"
   >
 </template>
-
-<script lang="ts">
-export default {
-  name: 'ui-input',
-
-  props: {
-    modelValue: [String, Number],
-  },
-
-  setup(props, context) {
-    const updateInput = () => context.emit('update:modelValue', event.target.value);
-
-    return {
-        updateInput,
-    };
-  },
-};
-</script>
 
 <style scoped lang="scss">
 .ui-input {

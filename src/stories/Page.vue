@@ -55,15 +55,15 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-import MyHeader from './Header.vue';
+import MyHeader from './Header.vue'
 
-import type { User } from './types';
+import type { User } from './types'
 
 const USER_DATA = {
   name: 'Jane Doe',
-};
+}
 
 export default {
   name: 'page',
@@ -73,25 +73,25 @@ export default {
   },
 
   setup() {
-    const user: ref<User | null> = ref(null);
+    const user: ref<User | null> = ref(null)
     const onLogin = () => {
-      user.value = USER_DATA;
-    };
+      user.value = USER_DATA
+    }
     const onLogout = () => {
-      user.value = null;
-    };
+      user.value = null
+    }
     const onCreateAccount = () => {
-      user.value = USER_DATA;
-    };
+      user.value = USER_DATA
+    }
 
     return {
       user,
       onLogin,
       onLogout,
       onCreateAccount,
-    };
+    }
   },
-};
+}
 </script>
 
 <style>

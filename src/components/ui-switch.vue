@@ -1,10 +1,15 @@
+<script lang="ts" setup>
+import IconMoon from '~/components/icons/moon.vue'
+
+const model = defineModel()
+</script>
+
 <template>
     <label class="ui-switch">
         <input
+            v-model="model"
             class="ui-switch__checkbox"
             type="checkbox"
-            :checked="modelValue"
-            @change="$emit('update:modelValue', $event.target.checked)"
         />
 
         <span class="ui-switch__slider">
@@ -12,23 +17,6 @@
         </span>
     </label>
 </template>
-
-<script lang="ts">
-import IconMoon from '~/components/icons/moon.vue';
-
-export default {
-  name: 'ui-switch',
-
-  components: {
-      IconMoon,
-  },
-
-  props: {
-    modelValue: Boolean,
-  },
-};
-</script>
-
 
 <style lang="scss">
 .ui-switch {

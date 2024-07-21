@@ -1,3 +1,17 @@
+<script lang="ts" setup>
+import { ref, inject } from 'vue'
+
+import UiInput from '~/components/ui-input.vue'
+import UiButton from '~/components/ui-button.vue'
+import UiSwitch from './components/ui-switch.vue'
+
+const toggleDarkMode = inject('toggleDarkMode')
+
+const text = ref('')
+const isDark = ref(toggleDarkMode())
+const log = () => console.log(text.value)
+</script>
+
 <template>
   <div>
     <img alt="Vue logo" src="./assets/logo.png" />
@@ -28,39 +42,6 @@
     <router-view></router-view>
   </div>
 </template>
-
-<script lang="ts">
-import { computed, ref, inject } from 'vue';
-
-import UiInput from '~/components/ui-input.vue';
-import UiButton from '~/components/ui-button.vue';
-import UiSwitch from './components/ui-switch.vue';
-
-export default {
-  name: 'App',
-
-  components: {
-    UiSwitch,
-    UiInput,
-    UiButton,
-  },
-
-  setup() {
-    const toggleDarkMode = inject('toggleDarkMode');
-
-    const text = ref('');
-    const isDark = ref(toggleDarkMode());
-    const log = () => console.log(text.value);
-
-    return {
-      text,
-      isDark,
-      log,
-      toggleDarkMode,
-    };
-  },
-};
-</script>
 
 <style lang="scss">
 @import "./assets/scss/index.scss";

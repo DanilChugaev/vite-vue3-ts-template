@@ -23,7 +23,7 @@ module.exports = {
     'vue/multi-word-component-names': 0,
     'linebreak-style': ['error', 'unix'],
     'quotes': ['error', 'single'],
-    'semi': ['error', 'always'],
+    'semi': ['error', 'never'],
     'comma-dangle': ['error', 'only-multiline']
   }
-};
+}
