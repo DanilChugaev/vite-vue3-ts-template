@@ -46,7 +46,7 @@ export default {
     }))
 
     const style = computed(() => ({
-      backgroundColor: props.backgroundColor
+      backgroundColor: props.backgroundColor,
     }))
 
     const onClick = () => context.emit('click', 1)
